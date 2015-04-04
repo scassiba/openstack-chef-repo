@@ -7,6 +7,10 @@ group :vagrant do
   gem 'chef-provisioning-vagrant', '~> 0.8.1'
 end
 
+group :docker do
+  gem 'chef-provisioning-docker', '~> 0.5.2'
+end
+
 group :lint do
   gem 'foodcritic', '~> 4.0.0'
   gem 'rubocop', '~> 0.29.0'

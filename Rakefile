@@ -43,6 +43,11 @@ task :aio_nova => :create_key do
   run_command('chef-client --force-formatter -z vagrant_linux.rb aio-nova.rb')
 end
 
+desc "All-in-One Docker build"
+task :aio_nova_docker => :create_key do
+  run_command('chef-client --force-formatter -z docker_linux.rb aio-nova-docker.rb')
+end
+
 desc "Multi-Neutron build"
 task :multi_neutron => :create_key do
   run_command('chef-client --force-formatter -z vagrant_linux.rb multi-neutron.rb')
